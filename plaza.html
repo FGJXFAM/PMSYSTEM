@@ -96,12 +96,137 @@
               <input type="text" class="form-control" id="csService" placeholder="" value="" required>
             </div>
             <div class="col-md-3 mb-4">
+              <label for="cstestinput">Power Supply Input Test</label>
+              <input type="text" class="form-control" id="csTestinput" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
               <label for="cscleaning">Cleaning and Restart Server</label>
               <input type="text" class="form-control" id="csCleaning" placeholder="" value="" required>
             </div>
+          </div>
+        </form>
+      </div>
+      <div class="container-lg">
+        <h4 class="mb-3">2.Digital Video Recorder</h4>
+        <form class="need-validation" novalidate>
+          <div class="row">
             <div class="col-md-3 mb-4">
-              <label for="cstestinput">Power Supply Input Test</label>
-              <input type="text" class="form-control" id="csTestinput" placeholder="" value="" required>
+              <label for="dvrip">IP Address</label>
+              <input type="text" class="form-control" id="dvrIp" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="dvrrec">Check the Recording</label>
+              <input type="text" class="form-control" id="dvrRec" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="dvrchannel">Check Active Channel</label>
+              <input type="text" class="form-control" id="dvrChannel" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="dvrtimesync">Check Time Sync</label>
+              <input type="text" class="form-control" id="dvrTimesync" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="dvrntp">NTP Server</label>
+              <input type="text" class="form-control" id="dvrNtp" placeholder="" value="" required>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="container-lg">
+        <h4 class="mb-3">3.Network Switch</h4>
+        <form class="need-validation" novalidate>
+          <div class="row">
+            <div class="col-md-3 mb-4">
+              <label for="nsport">Check Active Ports</label>
+              <input type="text" class="form-control" id="nsPort" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="nspower">Check Power Supplies Status</label>
+              <input type="text" class="form-control" id="nsPower" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="nstestinput">Power Supply Input Test</label>
+              <input type="text" class="form-control" id="nsTestinput" placeholder="" value="" required>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="container-lg">
+        <h4 class="mb-3">4.Media Converter</h4>
+        <form class="need-validation" novalidate>
+          <div class="row">
+            <div class="col-md-3 mb-4">
+              <label for="mcpower">Check Power Supplies Status</label>
+              <input type="text" class="form-control" id="mcPower" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="mctestinput">Power Supply Input Test</label>
+              <input type="text" class="form-control" id="mcTestinput" placeholder="" value="" required>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="container-lg">
+        <h4 class="mb-3">5.BIS Controller</h4>
+        <form class="need-validation" novalidate>
+          <div class="row">
+            <div class="col-md-3 mb-4">
+              <label for="bisport">Check Active Ports</label>
+              <input type="text" class="form-control" id="bisPort" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="biscleaning">Cleaning and Restart Server</label>
+              <input type="text" class="form-control" id="bisCleaning" placeholder="" value="" required>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="container-lg">
+        <h4 class="mb-3">6.Intercom System</h4>
+        <form class="need-validation" novalidate>
+          <div class="row">
+            <div class="col-md-3 mb-4">
+              <label for="istalk">Check Switch Talk</label>
+              <input type="text" class="form-control" id="isTalk" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="isport">Check Active Ports</label>
+              <input type="text" class="form-control" id="isPort" placeholder="" value="" required>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="container-lg">
+        <h4 class="mb-3">7.Common Monitoring Control</h4>
+        <form class="need-validation" novalidate>
+          <div class="row">
+            <div class="col-md-3 mb-4">
+              <label for="cmcsiren">Test Off Siren</label>
+              <input type="text" class="form-control" id="cmcSiren" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="cmcmode">Test A/M Switch Mode</label>
+              <input type="text" class="form-control" id="cmcMode" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="cmcalb">Test Off ALB</label>
+              <input type="text" class="form-control" id="cmcALB" placeholder="" value="" required>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="container-lg">
+        <h4 class="mb-3">8.Clock system</h4>
+        <form class="need-validation" novalidate>
+          <div class="row">
+            <div class="col-md-3 mb-4">
+              <label for="clocksync">Check Sync Status</label>
+              <input type="text" class="form-control" id="clockSync" placeholder="" value="" required>
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="clockcleaning">Cleaning</label>
+              <input type="text" class="form-control" id="clockCleaning" placeholder="" value="" required>
             </div>
           </div>
         </form>
