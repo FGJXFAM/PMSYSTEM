@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>PM Plaza Server</title>
+  <title>Approve PM Plaza Server</title>
 
 
   <!-- Bootstrap core CSS -->
@@ -433,14 +433,23 @@
           <div class="row">
             <div class="col-md-3 mb-4">
               <!--<label for="inputaccepted">Accepted</label>-->
-              <input type="text" class="form-control" id="inputAccepted" placeholder="Put name for Accepted" value="Sumit.K" required>
+              <input type="text" class="form-control" id="inputAccepted" placeholder="Put name for Accepted" value="Sumit.K" required disabled>
             </div>
             <div class="col-md-3 mb-4">
               <!--<label for="inputreported">Reported</label>-->
-              <input type="text" class="form-control" id="inputReported" placeholder="Put name for Reported" value="Komkit.W" required>
+              <input type="text" class="form-control" id="inputReported" placeholder="Put name for Reported" value="Komkit.W" required disabled>
+            </div>
+            <div class="col-md-3 mb-4">
+                <!--<label for="inputreported">Reported</label>-->
+                <input type="text" class="form-control" id="inputChecker" placeholder="Put name for Checker" value="Phongthep.K" required disabled>
+            </div>
+            <div class="col-md-3 mb-4">
+                <!--<label for="inputreported">Reported</label>-->
+                <input type="text" class="form-control" id="inputApprove" placeholder="Put name for Approve" value="" required>
             </div>
             <div class="col-md-3 mb-4">
               <button class="btn btn-primary  btn-block" type="submit">Send Data</button>
+              <button class="btn btn-primary  btn-block" type="submit">Reject</button>
             </div>
           </div>
         </form>

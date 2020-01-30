@@ -1,10 +1,101 @@
-<<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Approve Page</title>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
 
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Approve Page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/table.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+  <div class="logo">
+    <img src="img/logo.svg" class="center">
+  </div>
+  <div class="table-wrapper">
+    <div class="table-title" >
+      <div class="row">
+        <div class="col-sm-6">
+          <h2><b>Workflow</b></h2>
+        </div>
+        <div class="col-sm-6">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-info active">
+              <input type="radio" name="status" value="all" checked="checked"> All
+            </label>
+            <label class="btn btn-success">
+              <input type="radio" name="status" value="reported"> Reported
+            </label>
+            <label class="btn btn-warning">
+              <input type="radio" name="status" value="checked"> checked
+            </label>
+            <label class="btn btn-danger">
+              <input type="radio" name="status" value="rejected"> Rejected
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Title</th>
+          <th>Created&nbsp;Date</th>
+          <th>Created&nbsp;Time</th>
+          <th>PM&nbsp;Date</th>
+          <th>PM&nbsp;Time</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-status="reported">
+          <td>1</td>
+          <td>PM Plaza Server Workorder No.320000000001</td>
+          <td>2020-01-27</td>
+          <td>03:00</td>
+          <td>2020-01-26</td>
+          <td>23:00</td>
+          <td><span class="label label-success">Reported</span></td>
+          <td><a href="approveplaza.html" target="_blank" class="btn btn-sm manage">Manage</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".btn-group .btn").click(function () {
+        var inputValue = $(this).find("input").val();
+        if (inputValue != 'all') {
+          var target = $('table tr[data-status="' + inputValue + '"]');
+          $("table tbody tr").not(target).hide();
+          target.fadeIn();
+        } else {
+          $("table tbody tr").fadeIn();
+        }
+      });
+      // Changing the class of status label to support Bootstrap 4
+      var bs = $.fn.tooltip.Constructor.VERSION;
+      var str = bs.split(".");
+      if (str[0] == 4) {
+        $(".label").each(function () {
+          var classStr = $(this).attr("class");
+          var newClassStr = classStr.replace(/label/g, "badge");
+          $(this).removeAttr("class").addClass(newClassStr);
+        });
+      }
+    });
+  </script>
+</body>
+
 </html>
